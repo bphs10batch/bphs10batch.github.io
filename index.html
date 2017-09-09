@@ -57,7 +57,39 @@ tr:nth-child(even) {
 </style>
 </head>
 <body>
-    
+    <?php
+/**
+ * Export to PHP Array plugin for PHPMyAdmin
+ * @version 4.7.0
+ */
+
+/**
+ * Database `reunion_registration_db`
+ */
+
+/* `reunion_registration_db`.`list` */
+$list = array(
+  array('Id' => '1','Name' => 'Md.Arifur Rahman','Registered' => '0','Group' => 'Science','BirthDate' => '1994-10-16','Blood_Group' => ''),
+  array('Id' => '2','Name' => 'S.M.Asif Rahman','Registered' => '0','Group' => 'Science','BirthDate' => '1995-08-10','Blood_Group' => ''),
+  array('Id' => '3','Name' => 'Md.Mahmudul Hasan','Registered' => '0','Group' => 'Science','BirthDate' => '1994-12-31','Blood_Group' => ''),
+  array('Id' => '4','Name' => 'Jysan Aziz','Registered' => '0','Group' => 'Science','BirthDate' => '1994-08-24','Blood_Group' => ''),
+  array('Id' => '5','Name' => 'Tanvir Ahmed','Registered' => '0','Group' => 'Science','BirthDate' => '1994-12-11','Blood_Group' => ''),
+  array('Id' => '6','Name' => 'Md.Borhanul Asfia','Registered' => '0','Group' => 'Science','BirthDate' => '1994-01-05','Blood_Group' => ''),
+  array('Id' => '7','Name' => 'Md.Tanvir Mahtab','Registered' => '0','Group' => 'Science','BirthDate' => '1994-12-23','Blood_Group' => ''),
+  array('Id' => '8','Name' => 'Md.Mahmudur Rahman','Registered' => '0','Group' => 'Science','BirthDate' => '1994-11-10','Blood_Group' => ''),
+  array('Id' => '9','Name' => 'Md.Tojammel Haque','Registered' => '0','Group' => 'Science','BirthDate' => '1994-01-13','Blood_Group' => ''),
+  array('Id' => '10','Name' => 'Md.Kamrul Islam','Registered' => '0','Group' => 'Science','BirthDate' => '1994-11-11','Blood_Group' => ''),
+  array('Id' => '11','Name' => 'Badhan Kumar Sarker','Registered' => '0','Group' => 'Science','BirthDate' => '1994-01-02','Blood_Group' => ''),
+  array('Id' => '12','Name' => 'Ashik Ahmed','Registered' => '0','Group' => 'Science','BirthDate' => '1995-07-07','Blood_Group' => ''),
+  array('Id' => '13','Name' => 'Sudipto Ghosh','Registered' => '0','Group' => 'Science','BirthDate' => '1995-09-30','Blood_Group' => ''),
+  array('Id' => '14','Name' => 'Apu Kumar Biswas','Registered' => '0','Group' => 'Science','BirthDate' => '1994-06-20','Blood_Group' => ''),
+  array('Id' => '15','Name' => 'Farhan Zaman Rilke','Registered' => '0','Group' => 'Science','BirthDate' => '1994-10-23','Blood_Group' => ''),
+  array('Id' => '16','Name' => 'Md.Moustafizur Rahman','Registered' => '0','Group' => 'Science','BirthDate' => '1993-12-11','Blood_Group' => ''),
+  array('Id' => '17','Name' => 'Md.Ataour Rahman','Registered' => '0','Group' => 'Science','BirthDate' => '1995-03-13','Blood_Group' => ''),
+  array('Id' => '18','Name' => 'Md.Asraf Afrose','Registered' => '0','Group' => 'Science','BirthDate' => '1995-01-04','Blood_Group' => ''),
+  array('Id' => '19','Name' => 'Md.Ariful Islam','Registered' => '0','Group' => 'Science','BirthDate' => '1994-11-15','Blood_Group' => '')
+);
+?>
 <div class="header">
   <h2>Bheramara Pilot High School </h2>
   <h3>SSC 2K10 Batch</h3>
@@ -71,38 +103,17 @@ tr:nth-child(even) {
           <tr>
             <th>Name</th>
             <th>Group</th>
-            <th>Location(Now)</th>
           </tr>
-          <tr>
-            <td>Tanvir Mahtab</td>
-            <td>Science</td>
-            <td>Dhaka</td>
-          </tr>
-          <tr>
-            <td>Tanvir Ahmed</td>
-            <td>Science</td>
-            <td>Dhaka</td>
-          </tr>
-          <tr>
-            <td>Almas Ahmed</td>
-            <td>Science</td>
-            <td>Bheramara</td>
-          </tr>
-          <tr>
-            <td>Jysan Aziz</td>
-            <td>Science</td>
-            <td>Dhaka</td>
-          </tr>
-          <tr>
-            <td>Fazle Rabby</td>
-            <td>Science</td>
-            <td>Dhaka</td>
-          </tr>
-          <tr>
-            <td>Zakaria Islam Khan Hridoy</td>
-            <td>Science</td>
-            <td>Dhaka</td>
-          </tr>
+          <?php 
+            foreach ($list as $URL){
+                echo'<tr>'; 
+                echo'<td>'. $URL['Name']."</td>";
+                echo'<td>'. $URL['GroupName'].'</td>';
+                echo'<td>'. $URL['Group'].'</td>';
+                echo'<tr>';
+    }
+?>
+          
         </table>
      </div>
 </div>
