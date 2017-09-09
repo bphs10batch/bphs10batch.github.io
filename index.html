@@ -5,57 +5,53 @@
     * {
     box-sizing: border-box;
 }
-
 body {
     margin: 0;
 }
-
 /* Style the header */
 .header {
     background-color: #f1f1f1;
     padding: 50px;
     text-align: center;
 }
-
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 90%;
-    
+    width: 80%;
+    align:center;
 }
-
 td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
 }
-
 tr:nth-child(even) {
     background-color: #dddddd;
 }
     .column {
-    float: center;
+    float: left;
     padding: 10px;
     height: 300px; /* Should be removed. Only for demonstration */
 }
-
 /* Left and right column */
 .column.side {
     width: 25%;
 }
-
 /* Middle column */
 .column.middle {
     width: 50%;
 }
-
 /* Clear floats after the columns */
 .row:after {
     content: "";
     display: table;
     clear: both;
 }
-
+ @media (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
    .footer {
     background-color: #f1f1f1;
     padding: 10px;
