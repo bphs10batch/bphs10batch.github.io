@@ -18,47 +18,73 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+    .column {
+    float: left;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Left and right column */
+.column.side {
+    width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
 </style>
 </head>
 <body>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Group</th>
-    <th>Location(Now)</th>
-  </tr>
-  <tr>
-    <td>Tanvir Mahtab</td>
-    <td>Science</td>
-    <td>Dhaka</td>
-  </tr>
-  <tr>
-    <td>Tanvir Ahmed</td>
-    <td>Science</td>
-    <td>Dhaka</td>
-  </tr>
-  <tr>
-    <td>Almas Ahmed</td>
-    <td>Science</td>
-    <td>Bheramara</td>
-  </tr>
-  <tr>
-    <td>Jysan Aziz</td>
-    <td>Science</td>
-    <td>Dhaka</td>
-  </tr>
-  <tr>
-    <td>Fazle Rabby</td>
-    <td>Science</td>
-    <td>Dhaka</td>
-  </tr>
-  <tr>
-    <td>Zakaria Islam Khan Hridoy</td>
-    <td>Science</td>
-    <td>Dhaka</td>
-  </tr>
-</table>
-
+<div class="row">
+    <div class="column side" style="background-color:#aaa;">Left Bar</div>
+     <div class="column middle">Student
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Group</th>
+            <th>Location(Now)</th>
+          </tr>
+          <tr>
+            <td>Tanvir Mahtab</td>
+            <td>Science</td>
+            <td>Dhaka</td>
+          </tr>
+          <tr>
+            <td>Tanvir Ahmed</td>
+            <td>Science</td>
+            <td>Dhaka</td>
+          </tr>
+          <tr>
+            <td>Almas Ahmed</td>
+            <td>Science</td>
+            <td>Bheramara</td>
+          </tr>
+          <tr>
+            <td>Jysan Aziz</td>
+            <td>Science</td>
+            <td>Dhaka</td>
+          </tr>
+          <tr>
+            <td>Fazle Rabby</td>
+            <td>Science</td>
+            <td>Dhaka</td>
+          </tr>
+          <tr>
+            <td>Zakaria Islam Khan Hridoy</td>
+            <td>Science</td>
+            <td>Dhaka</td>
+          </tr>
+        </table>
+     </div>
+    <div class="column side" style="background-color:#ccc;">Right Navbar</div>
+</div>
 </body>
 </html
